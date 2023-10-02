@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <windows.h>
+#include <conio.h>
 
 
 using namespace std;
@@ -17,22 +18,29 @@ int main()
 	if (!(h >= 0 && h <= 25 && m >= 0 && m <= 60))
 	{
 		cout << "Данные введены неверно, попробуйте снова!" << endl;
+		_getch();
 		return 0;
 	}
 
 	if (h < 0 || h > 24 || m < 0 || m > 59)
 	{
 		cout << "Введённые данные некорректы! Попробуйте ещё раз";
+		_getch();
+		return 0;
 	}
 	else
 	{
 		if (h == 12 && m == 0)
 		{
 			cout << "полдень\n";
+			_getch();
+			return 0;
 		}
 		else if ((h == 24 || h == 0) && m == 0)
 		{
 			cout << "полночь\n";
+			_getch();
+			return 0;
 		}
 		else
 		{
@@ -119,10 +127,14 @@ int main()
 				if (h > 0 && h < 13)
 				{
 					cout << h << " " << x << " " << d << " " << "ровно\n";
+					_getch();
+					return 0;
 				}
 				else
 				{
 					cout << h % 12 << " " << x << " " << d << " " << "ровно\n";
+					_getch();
+					return 0;
 				}
 			}
 			else
@@ -130,10 +142,14 @@ int main()
 				if (h >= 0 && h < 13)
 				{
 					cout << h << " " << x << " " << m << " " << y << " " << d << "\n";
+					_getch();
+					return 0;
 				}
 				else
 				{
 					cout << h % 12 << " " << x << " " << m << " " << y << " " << d << "\n";
+					_getch();
+					return 0;
 				}
 			}
 
